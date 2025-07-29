@@ -1,149 +1,132 @@
-/* Gradiente de fundo para o header */
-.gradient-bg {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
-    position: relative;
-    overflow: hidden;
+/* Importação da fonte Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Configurações básicas do body */
+body { 
+    font-family: 'Inter', sans-serif; 
 }
 
-.gradient-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-    pointer-events: none;
+/* Gradiente de fundo usado no header e seção de preços */
+.gradient-bg { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
 }
 
-/* Animação para o badge amarelo */
-.badge-glow {
-    animation: glow 2s ease-in-out infinite alternate;
+/* Animação de pulso para botões */
+.pulse-animation { 
+    animation: pulse 2s infinite; 
 }
 
-@keyframes glow {
-    from {
-        box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
     }
-    to {
-        box-shadow: 0 0 20px rgba(234, 179, 8, 0.8), 0 0 30px rgba(234, 179, 8, 0.6);
+    50% { 
+        transform: scale(1.05); 
     }
 }
 
-/* Estilo para o badge de fogo */
-.fire-badge {
-    position: relative;
-    animation: fireGlow 1.5s ease-in-out infinite alternate;
+/* Animação flutuante para elementos do header */
+.floating { 
+    animation: floating 3s ease-in-out infinite; 
 }
 
-@keyframes fireGlow {
-    from {
-        box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+@keyframes floating {
+    0%, 100% { 
+        transform: translateY(0px); 
     }
-    to {
-        box-shadow: 0 0 25px rgba(220, 38, 38, 0.9), 0 0 35px rgba(220, 38, 38, 0.7);
-    }
-}
-
-/* Animação para botões pulsantes */
-.pulse-button {
-    animation: pulseScale 2s ease-in-out infinite;
-}
-
-@keyframes pulseScale {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
+    50% { 
+        transform: translateY(-10px); 
     }
 }
 
-/* Sombras para cards */
-.card-shadow {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.3s ease;
+/* Sistema de fade-in para animações de scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.card-shadow:hover {
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Configurações adicionais para melhor performance */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para botões hover */
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilos para cards com hover */
+.hover\:shadow-lg:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Animação de entrada para o conteúdo do header */
-.header-content {
-    animation: fadeInUp 1s ease-out;
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Transições suaves para todos os elementos interativos */
+a, button, .transition-colors, .transition-all, .transition-shadow {
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Responsividade para dispositivos móveis */
+/* Responsividade para textos */
 @media (max-width: 768px) {
-    .gradient-bg {
-        padding: 3rem 0;
+    .text-7xl {
+        font-size: 3.5rem;
+        line-height: 1;
     }
     
-    .header-content h1 {
+    .text-6xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
+    
+    .text-5xl {
         font-size: 2.5rem;
+        line-height: 1;
+    }
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .pulse-animation,
+    .floating,
+    .fade-in {
+        animation: none;
     }
     
-    .fire-badge {
-        font-size: 1.25rem;
-        padding: 0.75rem 1.5rem;
+    * {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Estilos para foco em elementos interativos */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Otimizações para impressão */
+@media print {
+    .gradient-bg {
+        background: #667eea !important;
+        color: white !important;
     }
     
-    .pulse-button {
-        font-size: 1.25rem;
-        padding: 1rem 2rem;
-    }
-}
-
-/* Animação suave para transições */
-* {
-    transition: all 0.3s ease;
-}
-
-/* Estilo para links hover */
-a:hover {
-    transform: translateY(-1px);
-}
-
-/* Gradientes adicionais para elementos especiais */
-.special-gradient {
-    background: linear-gradient(45deg, #f59e0b, #eab308, #facc15);
-}
-
-/* Efeito de brilho para elementos importantes */
-.shine-effect {
-    position: relative;
-    overflow: hidden;
-}
-
-.shine-effect::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shine 3s infinite;
-}
-
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
+    .pulse-animation,
+    .floating {
+        animation: none !important;
     }
 }
