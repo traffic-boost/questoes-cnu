@@ -23,226 +23,175 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
+      color: #333;
+    }
+
+    .header {
+      background-color: #002855;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .highlight {
+      color: #fbbc05;
+      font-weight: bold;
     }
 
     .container {
-      max-width: 900px;
+      padding: 2rem;
+      max-width: 1000px;
       margin: auto;
-      background-color: #fff;
-      padding: 20px;
+      background-color: white;
     }
 
-    .titulo {
-      background-color: #003366;
-      color: white;
-      padding: 20px;
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      color: #002855;
+    }
+
+    .cta {
+      background-color: #fbbc05;
+      color: #000;
       text-align: center;
-      font-size: 24px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      font-size: 1.2rem;
       font-weight: bold;
+      border-radius: 10px;
     }
 
-    .subtitulo {
-      color: #cc0000;
-      text-align: center;
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    .botao {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      margin: 20px 0;
-      background-color: #28a745;
-      color: white;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .secao {
-      margin-top: 30px;
-    }
-
-    .secao h2 {
-      color: #003366;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 5px;
-    }
-
-    .lista {
+    .features, .content, .extras, .faq {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
 
-    .lista li::before {
-      content: "📌 ";
+    .features li, .content li, .extras li, .faq li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
     }
 
-    .estatisticas {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .estatistica {
-      background-color: #e0e0e0;
-      padding: 15px;
-      margin: 10px;
-      border-radius: 5px;
+    .price {
       text-align: center;
-      width: 120px;
+      font-size: 2rem;
+      color: green;
+      margin: 1rem 0;
     }
 
-    .depoimentos {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 20px;
-    }
-
-    .faq {
-      margin-top: 30px;
-    }
-
-    .faq h3 {
-      color: #003366;
-    }
-
-    .faq p {
-      margin: 5px 0 15px;
-    }
-
-    .rodape {
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #f0f0f0;
-    }
-
-    .link {
-      color: #0066cc;
+    .btn {
+      display: inline-block;
+      background-color: #002855;
+      color: #fff;
+      padding: 1rem 2rem;
       text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    .testimonials {
+      background-color: #f1f1f1;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .testimonial {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .footer {
+      background-color: #002855;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
+  <div class="header">
+    <h1>🎯 CONCURSO CNU 2025 🎯<br><span class="highlight">🔥 1000 VAGAS DISPONÍVEIS 🔥</span></h1>
+  </div>
+
   <div class="container">
-    <div class="titulo">🎯 CONCURSO CNU 2025 🎯</div>
-    <div class="subtitulo">🔥 1000 VAGAS DISPONÍVEIS 🔥</div>
+    <div class="section">
+      <p><strong>Ebook de Questões - Analista Técnico-Administrativo</strong><br>
+      Questões elaboradas conforme o edital oficial do CNU 2025. Prepare-se com conteúdo direcionado e de qualidade!</p>
+    </div>
 
-    <p><strong>Ebook de Questões</strong><br>
-    Analista Técnico - Administrativo</p>
-    <p>Questões elaboradas conforme o edital oficial do CNU 2025. Prepare-se com conteúdo direcionado e de qualidade!</p>
+    <div class="cta">
+      ✅ 400 Questões | 🎯 Foco no Edital | ⚡ Acesso Imediato | 🛡️ Garantia 7 dias
+    </div>
 
-    <a href="https://pay.cakto.com.br/52wwvaa_496345" class="botao">🚀 QUERO MEU EBOOK AGORA</a>
-
-    <div class="secao">
-      <h2>📚 Por que escolher nosso ebook?</h2>
-      <ul class="lista">
-        <li><strong>Baseado no Edital:</strong> Todas as questões seguem o edital oficial do CNU 2025</li>
-        <li><strong>Foco na Vaga:</strong> Conteúdo específico para Analista Técnico - Administrativo</li>
-        <li><strong>Acesso Imediato:</strong> Receba instantaneamente após a compra</li>
+    <div class="section">
+      <h2>Por que escolher nosso ebook?</h2>
+      <ul class="features">
+        <li>📚 Baseado no Edital 2025</li>
+        <li>🎯 Foco na vaga de Analista Técnico - Administrativo</li>
+        <li>⚡ Acesso imediato após a compra</li>
       </ul>
     </div>
 
-    <div class="secao">
-      <h2>📖 O que você vai encontrar no ebook</h2>
-      <p><strong>Conhecimentos Gerais:</strong></p>
-      <ul class="lista">
-        <li>Língua Portuguesa</li>
-        <li>Raciocínio Lógico e Quantitativo</li>
-        <li>Ética no Serviço Público e Integridade</li>
-        <li>Noções de Administração Pública</li>
-        <li>Noções de Políticas Públicas</li>
-        <li>Noções de Direito (Constitucional e Administrativo)</li>
-      </ul>
-
-      <p><strong>Conhecimentos Específicos:</strong></p>
-      <ul class="lista">
-        <li>Administração Geral</li>
-        <li>Administração Financeira e Orçamentária</li>
-        <li>Gestão de Pessoas</li>
-        <li>Arquivologia</li>
-        <li>Administração de Materiais</li>
-        <li>Direito Administrativo</li>
-      </ul>
-
-      <p><strong>Recursos Extras:</strong></p>
-      <ul class="lista">
-        <li>Dicas de rotina de estudos</li>
-        <li>Dicas de estudo eficiente</li>
-        <li>Mapas mentais inclusos</li>
-        <li>Técnicas de memorização</li>
+    <div class="section">
+      <h2>O que você vai encontrar no ebook</h2>
+      <ul class="content">
+        <li><strong>Conhecimentos Gerais:</strong> Língua Portuguesa, Raciocínio Lógico, Ética, Administração Pública, Políticas Públicas, Direito Constitucional e Administrativo</li>
+        <li><strong>Conhecimentos Específicos:</strong> Administração Geral, AFO, Gestão de Pessoas, Arquivologia, Administração de Materiais, Direito Administrativo</li>
       </ul>
     </div>
 
-    <div class="estatisticas">
-      <div class="estatistica"><strong>400</strong><br>questões totais</div>
-      <div class="estatistica"><strong>200</strong><br>conhecimentos gerais</div>
-      <div class="estatistica"><strong>200</strong><br>conhecimentos específicos</div>
-      <div class="estatistica"><strong>2025</strong><br>atualizado</div>
+    <div class="section">
+      <h2>Recursos Extras</h2>
+      <ul class="extras">
+        <li>💡 Dicas de rotina de estudos</li>
+        <li>💡 Técnicas de memorização</li>
+        <li>💡 Mapas mentais inclusos</li>
+      </ul>
     </div>
 
-    <div class="secao">
-      <h2>📋 Edital Oficial</h2>
-      <p>Consulte o edital oficial do Concurso Nacional Unificado 2025 para conhecer todos os detalhes sobre as vagas, requisitos e conteúdo programático.</p>
-      <p><a href="https://conhecimento.fgv.br/cpnu2" class="link" target="_blank">📄 ACESSAR EDITAL OFICIAL</a></p>
+    <div class="price">
+      DE R$ 97,00 POR APENAS <br><span class="highlight">R$ 47,00</span>
     </div>
 
-    <div class="secao">
-      <h2>💰 Oferta Especial de Lançamento</h2>
-      <p>De <del>R$ 97,00</del> por apenas <strong>R$ 47,00</strong><br>
-      💳 À vista ou parcelado<br>
-      ✅ Acesso imediato após o pagamento<br>
-      ✅ Garantia de 7 dias ou seu dinheiro de volta</p>
+    <div style="text-align:center;">
+      <a href="https://pay.cakto.com.br/52wwvaa_496345" class="btn">🛒 COMPRAR AGORA</a><br>
+      <a href="https://conhecimento.fgv.br/cpnu2" class="btn" style="background-color: #fbbc05; color: black;">📄 ACESSAR EDITAL</a>
     </div>
 
-    <a href="https://pay.cakto.com.br/52wwvaa_496345" class="botao">🛒 COMPRAR AGORA</a>
-
-    <div class="secao">
-      <h2>💬 O que dizem nossos clientes</h2>
-      <div class="depoimentos">
-        ⭐⭐⭐⭐⭐<br>
-        "Excelente material! As questões são muito bem elaboradas e seguem exatamente o que está no edital. Recomendo!"<br><em>Maria Silva</em>
-      </div>
-      <div class="depoimentos">
-        ⭐⭐⭐⭐⭐<br>
-        "O ebook me ajudou muito na preparação. As explicações são claras e o conteúdo é muito completo."<br><em>João Santos</em>
-      </div>
-      <div class="depoimentos">
-        ⭐⭐⭐⭐⭐<br>
-        "Material de qualidade excepcional. Vale cada centavo investido. Já indiquei para vários amigos!"<br><em>Ana Costa</em>
-      </div>
+    <div class="section testimonials">
+      <h2>O que dizem nossos clientes</h2>
+      <p class="testimonial">⭐⭐⭐⭐⭐ "Excelente material! As questões são muito bem elaboradas e seguem exatamente o que está no edital. Recomendo!" – Maria Silva</p>
+      <p class="testimonial">⭐⭐⭐⭐⭐ "O ebook me ajudou muito na preparação. As explicações são claras e o conteúdo é muito completo." – João Santos</p>
+      <p class="testimonial">⭐⭐⭐⭐⭐ "Material de qualidade excepcional. Vale cada centavo investido. Já indiquei para vários amigos!" – Ana Costa</p>
     </div>
 
-    <div class="faq">
-      <h2>❓ Perguntas Frequentes</h2>
-      <h3>📧 Como recebo o ebook após a compra?</h3>
-      <p>Você receberá o link para download por e-mail em até 5 minutos após a confirmação.</p>
-
-      <h3>🔄 O material é atualizado?</h3>
-      <p>Sim! Está baseado no edital mais recente do CNU 2025.</p>
-
-      <h3>🖨️ Posso imprimir o ebook?</h3>
-      <p>Sim, para uso pessoal nos estudos.</p>
-
-      <h3>🛡️ Há garantia?</h3>
-      <p>Sim, garantia incondicional de 7 dias. Se não gostar, devolvemos o dinheiro.</p>
-    </div>
-
-    <div class="rodape">
-      <p>📧 Contato | 📋 Termos</p>
-      <p>© 2024 Ebook CNU 2025. Todos os direitos reservados.</p>
+    <div class="section">
+      <h2>Perguntas Frequentes</h2>
+      <ul class="faq">
+        <li>📧 Como recebo o ebook? – Por e-mail em até 5 minutos após o pagamento.</li>
+        <li>🔄 O material é atualizado? – Sim, com base no edital mais recente.</li>
+        <li>🖨️ Posso imprimir? – Sim, para uso pessoal.</li>
+        <li>🛡️ Tem garantia? – Sim, 7 dias incondicional.</li>
+      </ul>
     </div>
   </div>
+
+  <div class="footer">
+    © 2024 Ebook CNU 2025. Todos os direitos reservados.
+  </div>
+
 </body>
 </html>
